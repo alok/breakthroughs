@@ -1,0 +1,5 @@
+*.cnf
+cubes/
+*.out
+*result*.txt
+cube_log.txt
