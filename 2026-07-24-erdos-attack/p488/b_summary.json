@@ -1,0 +1,18 @@
+{
+ "problem": "Erdos #488: A finite, B={n>=1: some a in A divides n}. Conjecture: for every m>n>=max(A), |B∩[1,m]|/m < 2|B∩[1,n]|/n. (Correct 'divides' version; the 'does-not-divide' misprint was already refuted by others.)",
+ "goal": "maximize R(A) = sup_{m>n>=max(A)} f(m)/f(n); R>2 disproves",
+ "no_counterexample_found": true,
+ "best_ratio_overall": {"value": 1.9999999799999997, "A": "singleton {49999999}", "n": 99999997, "m": 99999998, "note": "equals known 2-1/a; verified independently by exact rational inclusion-exclusion"},
+ "findings": [
+  {"name": "singleton extremality (exhaustive)", "detail": "all 1527 primitive subsets of {2..16} sieved to 1e5: normalized excess (2-R(A))*max(A) >= 1 with equality exactly for singletons; hill-climb over subsets of [2,400] converges to singleton from every start. Suggests sharp form R(A) <= 2 - 1/max(A); every experiment in every family satisfied it."},
+  {"name": "thick-singleton family", "detail": "A = primes in (x,cx], n*=2*minA-1, m->sieve max: measured ratio matches 2*log(c)/(c-1) -> 2 as c->1+ (c=1.1: 1.9067 vs 1.9062 predicted; c=1.01, |A|=753: 1.9803). Continuum of many-element near-extremal families interpolating (x,2x] (ratio 2log2=1.386) down to singleton (ratio 2)."},
+  {"name": "Tao asymptotic regime improved", "detail": "regime max(A)=o(n), m->infinity (f(m)->delta(A) exactly): Tao's window primes in (n^{1/3},n^{1/2}] gives 1.0311. Sieve-driven optimization finds optimal single window much wider: primes in (n^0.18, n^0.6], delta=0.68956, min f=0.63362 (X=5e8 chunked sieve, argmin n=132158349) => ratio 1.08830. Mechanism: truncate inclusion-exclusion after a negative term; pair I-E model underestimates once alpha<1/4 (4th+ order terms). Two-window configs do not beat the single window."},
+  {"name": "fixed-scale windows", "detail": "A = primes in (M/2, M]: ratio ~1.35-1.55 (finite), ~2log2 as M->infty; decreasing in M."}
+ ],
+ "verification": [
+  "singleton, primes(50,100], {15,16} witnesses re-verified by exact rational inclusion-exclusion (fractions module): exact agreement",
+  "winner window (n^0.18,n^0.6] recounted at 1e7 by independent smallest-prime-factor factorization sieve: counts agree exactly (6738711)"
+ ],
+ "sieve_sizes": {"main": 1e8, "deep": 5e8},
+ "honest_assessment": "Everything points to the conjecture being true with sup ratio exactly 2, approached only along singleton-like (max(A) ~ n/2) degenerations; in the structurally interesting small-A regime the achievable ratio appears to cap near 1.09. More compute (larger sieves, wider window search) would refine the 1.088 number but shows no path past 2."
+}
