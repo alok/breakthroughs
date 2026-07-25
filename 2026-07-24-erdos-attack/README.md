@@ -16,8 +16,11 @@ for #835 itself the theorem below is subsumed; the problem's real frontier is
 k = 16 (tied to the open S(4,5,21)). What survives as new mathematics
 ([PROOF.md](p835/PROOF.md)): **Z₁₁ admits at most 7 pairwise disjoint starters — no
 golf design of order 11 is cyclic** (refines Colbourn–Nonay 1997; human
-mod-3 proof extracted from the SAT core, Lean formalization in progress),
-plus the starter ↔ Johnson-colouring technique now aimed at k = 16 / Z₁₇.
+mod-3 proof extracted from the SAT core, then **fully formalized in Lean** —
+`no_order11_symmetry_unconditional` in `leanm/ErdosattackM/Johnson835/` is
+kernel-checked end-to-end with no SAT artifact in the trust chain, standard
+axioms only), plus the starter ↔ Johnson-colouring technique now aimed at
+k = 16 / Z₁₇.
 Original result as found:
 **Theorem (computer-proved, DRAT-certified).** No proper 11-colouring of the
 Johnson graph J(20,10) admits a symmetry of order 11 — i.e. for every order-11
