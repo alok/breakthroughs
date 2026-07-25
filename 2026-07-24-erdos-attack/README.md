@@ -45,6 +45,14 @@ record. New on top of the literature:
 All 28 NLC witnesses verified by **four** independent implementations
 (including [my own](p993/independent_verify_4th.py), distinct from the agent's three).
 
+**Lean-certified** (`lean/`, `leanm/`): for every census tree it is a
+kernel-checked theorem — sorry-free, standard axioms only, no `native_decide`
+— that the tree has exactly N_k independent vertex subsets of each size k
+(subset-counting semantics via the verified DP correctness theorem
+`indepPolyRT_correct`), and that this sequence is non-log-concave yet
+unimodal. Apparently the first formally verified independence polynomials
+of trees.
+
 ### 3. Erdős #488 — quantitative structure  `p488/`
 No counterexample (conjecture supported). New quantitative findings:
 - **Empirical sharp form**: ratio ≤ 2 − 1/max(A) across every family tested
