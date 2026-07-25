@@ -1,0 +1,6 @@
+name = "erdosattack"
+version = "0.1.0"
+defaultTargets = ["Erdosattack"]
+
+[[lean_lib]]
+name = "Erdosattack"
