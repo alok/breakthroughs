@@ -4,4 +4,6 @@ import ErdosattackM.Witnesses
 import ErdosattackM.Johnson835.Defs
 import ErdosattackM.Johnson835.Conjugacy
 import ErdosattackM.Johnson835.CliqueOrbit
+import ErdosattackM.Johnson835.StarterSystem
+import ErdosattackM.Johnson835.TwistedUnsatProof
 import ErdosattackM.Johnson835.Main

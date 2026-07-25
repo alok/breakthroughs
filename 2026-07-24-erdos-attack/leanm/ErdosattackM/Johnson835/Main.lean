@@ -1,5 +1,6 @@
 import ErdosattackM.Johnson835.Conjugacy
 import ErdosattackM.Johnson835.CliqueOrbit
+import ErdosattackM.Johnson835.TwistedUnsatProof
 /-!
 # No proper 11-coloring of `J(20,10)` has an order-11 symmetry (Erdős #835)
 
@@ -125,6 +126,38 @@ theorem no_order11_equivariant_coloring (hT : TwistedUnsat) :
         Proper c ∧ orderOf (cAct ε g) = 11 ∧ ∀ A, c (cAct ε g A) = π (c A) := by
   rintro ⟨c, ε, g, π, hc, hord, heq⟩
   exact no_order11_symmetry hT c hc ε g π hord heq
+
+/-! ### Stage 2: `TwistedUnsat` discharged — unconditional theorems
+
+`twistedUnsat` (in `TwistedUnsatProof.lean`) proves the twisted system
+unsatisfiable via the starter-system obstruction, with no SAT/LRAT input, so
+the Stage-1 theorems hold unconditionally. -/
+
+/-- **Main theorem, unconditional** (Erdős #835 symmetry obstruction):
+no proper 11-coloring `c` of the Johnson graph `J(20,10)` admits an order-11
+symmetry from the natural `S₂₀ × Z₂` action, for any color permutation `π`. -/
+theorem no_order11_symmetry_unconditional
+    (c : V → Fin 11) (hc : Proper c)
+    (ε : Bool) (g : Equiv.Perm (Fin 20)) (π : Equiv.Perm (Fin 11))
+    (hord : orderOf (cAct ε g) = 11)
+    (heq : ∀ A, c (cAct ε g A) = π (c A)) : False :=
+  no_order11_symmetry twistedUnsat c hc ε g π hord heq
+
+/-- Human-readable corollary, unconditional: there is **no** `π`-equivariant
+proper 11-coloring of `J(20,10)` for **any** order-11 element of the natural
+`S₂₀ × Z₂` action and **any** color permutation `π`. -/
+theorem no_order11_equivariant_coloring_unconditional :
+    ¬ ∃ (c : V → Fin 11) (ε : Bool) (g : Equiv.Perm (Fin 20))
+        (π : Equiv.Perm (Fin 11)),
+        Proper c ∧ orderOf (cAct ε g) = 11 ∧ ∀ A, c (cAct ε g A) = π (c A) :=
+  no_order11_equivariant_coloring twistedUnsat
+
+-- Axiom audit: both should report only the three standard axioms
+-- (`propext`, `Classical.choice`, `Quot.sound`) — no `ofReduceBool`, no
+-- `sorryAx`.
+#print axioms twistedUnsat
+#print axioms no_order11_symmetry_unconditional
+#print axioms no_order11_equivariant_coloring_unconditional
 
 end Johnson835
 end ErdosattackM
