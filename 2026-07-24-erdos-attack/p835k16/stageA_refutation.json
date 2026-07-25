@@ -1,0 +1,54 @@
+{
+ "statement": "No proper 13-coloring of J(24,12) is AGL(1,13)-equivariant (twist color(sigma A)=color(A)+1, color(tau A)=2*color(A)).",
+ "witness_edge": {
+  "A": [
+   0,
+   2,
+   3,
+   4,
+   5,
+   7,
+   13,
+   14,
+   16,
+   19,
+   20,
+   23
+  ],
+  "B": [
+   0,
+   2,
+   3,
+   4,
+   5,
+   7,
+   13,
+   14,
+   19,
+   20,
+   21,
+   23
+  ],
+  "intersection_size": 11
+ },
+ "stab_A": [
+  [
+   12,
+   7
+  ]
+ ],
+ "stab_B": [
+  [
+   12,
+   7
+  ]
+ ],
+ "forced_color_A": [
+  10
+ ],
+ "forced_color_B": [
+  10
+ ],
+ "explanation": "Each 12-subset is stabilized by the listed affine maps x->a*x+b on the 13-cycle {0..12} (fixing {13..23} pointwise). Equivariance forces color(S) = fixed point of c->a*c+b for each stabilizer (a,b) of S. Both A and B are forced to the SAME color, yet |A cap B| = 11 makes them adjacent: monochromatic edge. Hence the AGL ansatz admits no proper coloring.",
+ "kissat": "s UNSATISFIABLE in 0.99s (default) and with --sat --seed=1; plus 148159 forced-forced violated constraints found arithmetically."
+}

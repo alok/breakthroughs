@@ -20,7 +20,17 @@ mod-3 proof extracted from the SAT core, then **fully formalized in Lean** —
 `no_order11_symmetry_unconditional` in `leanm/ErdosattackM/Johnson835/` is
 kernel-checked end-to-end with no SAT artifact in the trust chain, standard
 axioms only), plus the starter ↔ Johnson-colouring technique now aimed at
-k = 16 / Z₁₇.
+k = 16 / Z₁₇ — where the analysis (`p835k16/`) shows the symmetric route
+**survives**: Z₁₇ has 3,857 starters (two independent enumerations) and K₁₆
+partitions into 15 disjoint Z₁₇-starters (explicit partition found and
+verified; ≥270 exist; no k=10-style modular obstruction at p=17). A further
+theorem-let pins C₁₇ as exactly the boundary of the symmetric approach: any
+strictly larger symmetry group inside AGL(1,17) contains an affine involution
+that forces a monochromatic adjacent pair. The open continuation — growing
+the starter seed through higher orbit layers of J(32,16) toward an actual
+17-colouring (or a deeper obstruction) — is the documented next quest.
+Bonus from the aborted k=12 run: the AGL(1,13)-equivariant ansatz for
+J(24,12) is refuted by a two-line certificate (`p835k16/stageA_refutation.json`).
 Original result as found:
 **Theorem (computer-proved, DRAT-certified).** No proper 11-colouring of the
 Johnson graph J(20,10) admits a symmetry of order 11 — i.e. for every order-11

@@ -1,0 +1,656 @@
+{
+ "17": {
+  "p": 17,
+  "n_starters": 3857,
+  "ratio_class_labels": [
+   [
+    2,
+    9
+   ],
+   [
+    3,
+    6
+   ],
+   [
+    4,
+    13
+   ],
+   [
+    5,
+    7
+   ],
+   [
+    8,
+    15
+   ],
+   [
+    10,
+    12
+   ],
+   [
+    11,
+    14
+   ],
+   [
+    16
+   ]
+  ],
+  "ratio_class_sizes": [
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   16,
+   8
+  ],
+  "per_class_count_distributions": [
+   {
+    "0": 1569,
+    "1": 1344,
+    "2": 720,
+    "3": 192,
+    "4": 32
+   },
+   {
+    "0": 1505,
+    "1": 1232,
+    "2": 704,
+    "3": 320,
+    "4": 64,
+    "5": 32
+   },
+   {
+    "0": 1201,
+    "1": 1392,
+    "2": 880,
+    "3": 288,
+    "4": 96
+   },
+   {
+    "0": 1361,
+    "1": 1360,
+    "2": 720,
+    "3": 320,
+    "4": 96
+   },
+   {
+    "0": 1345,
+    "1": 1392,
+    "2": 816,
+    "3": 192,
+    "4": 80,
+    "5": 32
+   },
+   {
+    "0": 1249,
+    "1": 1408,
+    "2": 768,
+    "3": 304,
+    "4": 128
+   },
+   {
+    "0": 1217,
+    "1": 1424,
+    "2": 896,
+    "3": 224,
+    "4": 80,
+    "6": 16
+   },
+   {
+    "0": 2240,
+    "1": 1248,
+    "2": 304,
+    "3": 64,
+    "8": 1
+   }
+  ],
+  "modular_obstructions": [],
+  "partition_exists": true,
+  "partition": [
+   [
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     5
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     6,
+     12
+    ],
+    [
+     7,
+     14
+    ],
+    [
+     8,
+     16
+    ],
+    [
+     10,
+     13
+    ],
+    [
+     11,
+     15
+    ]
+   ],
+   [
+    [
+     1,
+     3
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     4,
+     12
+    ],
+    [
+     5,
+     10
+    ],
+    [
+     7,
+     13
+    ],
+    [
+     8,
+     11
+    ],
+    [
+     9,
+     16
+    ],
+    [
+     14,
+     15
+    ]
+   ],
+   [
+    [
+     1,
+     4
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     3,
+     9
+    ],
+    [
+     5,
+     14
+    ],
+    [
+     6,
+     16
+    ],
+    [
+     8,
+     12
+    ],
+    [
+     10,
+     11
+    ],
+    [
+     13,
+     15
+    ]
+   ],
+   [
+    [
+     1,
+     6
+    ],
+    [
+     2,
+     9
+    ],
+    [
+     3,
+     11
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     5,
+     7
+    ],
+    [
+     10,
+     16
+    ],
+    [
+     12,
+     15
+    ],
+    [
+     13,
+     14
+    ]
+   ],
+   [
+    [
+     1,
+     8
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     14
+    ],
+    [
+     5,
+     9
+    ],
+    [
+     6,
+     15
+    ],
+    [
+     7,
+     10
+    ],
+    [
+     11,
+     16
+    ],
+    [
+     12,
+     13
+    ]
+   ],
+   [
+    [
+     1,
+     13
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     10
+    ],
+    [
+     4,
+     15
+    ],
+    [
+     6,
+     14
+    ],
+    [
+     7,
+     8
+    ],
+    [
+     9,
+     11
+    ],
+    [
+     12,
+     16
+    ]
+   ],
+   [
+    [
+     1,
+     14
+    ],
+    [
+     2,
+     11
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     10
+    ],
+    [
+     5,
+     12
+    ],
+    [
+     7,
+     9
+    ],
+    [
+     8,
+     13
+    ],
+    [
+     15,
+     16
+    ]
+   ],
+   [
+    [
+     1,
+     12
+    ],
+    [
+     2,
+     16
+    ],
+    [
+     3,
+     15
+    ],
+    [
+     4,
+     14
+    ],
+    [
+     5,
+     13
+    ],
+    [
+     6,
+     8
+    ],
+    [
+     7,
+     11
+    ],
+    [
+     9,
+     10
+    ]
+   ],
+   [
+    [
+     1,
+     5
+    ],
+    [
+     2,
+     12
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     6,
+     9
+    ],
+    [
+     7,
+     16
+    ],
+    [
+     8,
+     14
+    ],
+    [
+     10,
+     15
+    ],
+    [
+     11,
+     13
+    ]
+   ],
+   [
+    [
+     1,
+     7
+    ],
+    [
+     2,
+     15
+    ],
+    [
+     3,
+     12
+    ],
+    [
+     4,
+     11
+    ],
+    [
+     5,
+     6
+    ],
+    [
+     8,
+     10
+    ],
+    [
+     9,
+     14
+    ],
+    [
+     13,
+     16
+    ]
+   ],
+   [
+    [
+     1,
+     9
+    ],
+    [
+     2,
+     13
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     15
+    ],
+    [
+     6,
+     10
+    ],
+    [
+     11,
+     12
+    ],
+    [
+     14,
+     16
+    ]
+   ],
+   [
+    [
+     1,
+     10
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     16
+    ],
+    [
+     7,
+     12
+    ],
+    [
+     8,
+     15
+    ],
+    [
+     9,
+     13
+    ],
+    [
+     11,
+     14
+    ]
+   ],
+   [
+    [
+     1,
+     11
+    ],
+    [
+     2,
+     14
+    ],
+    [
+     3,
+     16
+    ],
+    [
+     4,
+     13
+    ],
+    [
+     5,
+     8
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     9,
+     15
+    ],
+    [
+     10,
+     12
+    ]
+   ],
+   [
+    [
+     1,
+     15
+    ],
+    [
+     2,
+     10
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     4,
+     16
+    ],
+    [
+     5,
+     11
+    ],
+    [
+     6,
+     13
+    ],
+    [
+     8,
+     9
+    ],
+    [
+     12,
+     14
+    ]
+   ],
+   [
+    [
+     1,
+     16
+    ],
+    [
+     2,
+     8
+    ],
+    [
+     3,
+     13
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     6,
+     11
+    ],
+    [
+     7,
+     15
+    ],
+    [
+     9,
+     12
+    ],
+    [
+     10,
+     14
+    ]
+   ]
+  ],
+  "max_disjoint": 15,
+  "exact_cover_nodes": 2650,
+  "exact_cover_seconds": 0.33,
+  "partitions_lower_bound": 270,
+  "partitions_note": "exact-cover enumeration found 270 distinct partitions within a 2-minute budget (count is a lower bound; enumeration not exhausted)"
+ },
+ "starter_census": {
+  "3": 1,
+  "5": 1,
+  "7": 3,
+  "11": 25,
+  "13": 133,
+  "17": 3857
+ },
+ "census_note": "two independent enumeration algorithms agree (point-driven DFS and gap-class-driven DFS)",
+ "k16_agl_refutation": {
+  "statement": "No proper 17-coloring of J(32,16) is H-equivariant for any C17 < H <= AGL(1,17)",
+  "reason": "Z17* cyclic of order 16=2^4 => any nontrivial multiplier subgroup contains a=-1 => H contains an affine involution; two adjacent involution-invariant 16-subsets are both forced to the fixed color",
+  "witness": {
+   "A": "{0,1,16} u {19..31}",
+   "B": "{0,1,16} u {18} u {20..31}",
+   "involution": "x -> -x on Z17, identity on {17..31}",
+   "forced_color_both": 0
+  },
+  "script": "agl17_witness.py (verified)"
+ },
+ "literature": {
+  "golf_design_definition": "v-2 pairwise disjoint idempotent symmetric Latin squares (quasigroups) of order v; equivalently for each point c the v-2 induced perfect matchings on the remaining v-1 points partition E(K_{v-1}). CYCLIC (Z_v-circulant) golf design of order v <=> partition of E(K_{v-1}) on Z_v\\{0} into v-2 pairwise disjoint starters -- exactly the object computed here.",
+  "spectrum": "golf designs of order v exist iff v odd, v>=3, v != 5 (Chang, J. Combin. Des. 15 (2007) 84-89, DOI 10.1002/jcd.20099, completing Colbourn-Nonay)",
+  "colbourn_nonay": "A golf design of order 11, J. Statist. Plann. Inference (1997), DOI 10.1016/s0378-3758(96)00057-2 -- order-11 golf designs EXIST but by our Z11 result none is cyclic",
+  "lu_chen_cao": "Hong Lu, Jianpeng Chen, Haitao Cao, On a pair of orthogonal golf designs, Discrete Math. 346(8) (2023) 113406, DOI 10.1016/j.disc.2023.113406 -- full text paywalled at time of writing; whether their order-17 object is a cyclic golf design (15 disjoint Z17 starters) UNCONFIRMED from accessible sources",
+  "issac2019": "Huang-Liu-Ge-Ma-Zhang, Investigating the Existence of Orthogonal Golf Designs via Satisfiability Testing, ISSAC 2019, DOI 10.1145/3326229.3326232"
+ }
+}
