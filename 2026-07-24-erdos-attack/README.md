@@ -76,7 +76,15 @@ Best certified-feasible 10-square packing: side-sum 2.9999861 (< 3); every
 tilted start converged back to axis-parallel at machine precision
 ("tilt-repulsion") — evidence the conjecture is true.
 
-### #647 (m + τ(m) ≤ n + 2 witness hunt)  `p647/` — see final report in this dir.
+### #647 (m + τ(m) ≤ n + 2 witness hunt)  `p647/`
+No witness: **no n in (24, 3.5×10¹²] satisfies the condition** (direct,
+assumption-free segmented τ-sieve at ~0.7×10⁹ values/s; rigorous warm-start
+argument via τ(m) ≤ 2√m; 7 independent cross-checks). Extends the OEIS-recorded
+direct-sieve frontier (10¹², Idén 2026) by 3.5×. Also independently audited
+Hughes's unpublished reduction certificate (erdos647-proof-chain): its
+dependency-free verifier passes 30/30 here, pushing corroborated non-existence
+to ~6.16×10¹⁷ (with stated trust gaps). Witness hunters should expect nothing
+below that.
 
 ## Verification discipline
 - Every SAT result: solver-independent replication and/or DRAT certificate
