@@ -67,9 +67,33 @@ they must cover all **10**. Since 10 ≢ 0 (mod 3), no such partition exists. �
   k = 4, 6. **At p = 13 the obstruction vanishes: K₁₂ does partition into 11
   Z₁₃-starters** — see the k = 12 attack.
 
-## Consequences
+## Status update (same night, after deeper literature/forum review)
 
-- Any proper 11-colouring of J(20,10), if one exists, is 11-asymmetric.
-- The analogous C₁₃-symmetric route to χ(J(24,12)) = 13 (the *next* open case
-  k = 12) is **not** blocked at the starter level — an explicit starter
-  partition of K₁₂ exists and can seed a construction.
+A March 2026 comment on the erdosproblems.com forum thread for #835 proves
+χ(J(20,10)) ≥ 12 and χ(J(24,12)) ≥ 14 outright (colour classes form large
+sets of Steiner systems; derivation reaches S(4,5,15) resp. S(4,5,17), both
+nonexistent). So for the Erdős problem itself our theorem is **subsumed**:
+no 11-colouring of J(20,10) exists at all, symmetric or not. The problem's
+true frontier is k ∈ {16, 112, 256, 268} (k ≤ 500), with k = 16 tied to the
+open existence of S(4,5,21).
+
+What survives as **new mathematics** (per the design-theory literature
+check): in the language of golf designs — a golf design of order n is a set
+of n−2 pairwise disjoint near-one-factorizations —
+
+> **Theorem.** Z₁₁ admits at most 7 pairwise disjoint starters; in
+> particular the 45 pairs of Z₁₁∖{0} do not partition into 9 starters, i.e.
+> **no golf design of order 11 is cyclic.**
+
+This refines Colbourn–Nonay (1997), who constructed a (non-cyclic) golf
+design of order 11 by computer — order 11 was one of the two last holdout
+orders for golf designs. Neither the maximum (7) nor the no-cyclic corollary
+appears in the literature (checked: Dinitz's Handbook "Starters" chapter and
+errata, orthogonal-starter papers, disjoint-Skolem literature). The mod-3
+ratio-class proof above is the first human proof; contrast Z₁₃ (partition
+into 11 starters exists) and see the k = 16 analysis for Z₁₇.
+
+The starter ↔ Johnson-colouring reduction (a C_p-symmetric proper
+p-colouring of J(2p−2, p−1) forces a partition of K_{p−1} into p−2 disjoint
+Z_p-starters) is itself a new technique in the #835 orbit and applies to the
+genuinely open frontier case k = 16 via Z₁₇.

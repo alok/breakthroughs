@@ -9,7 +9,16 @@ literature the same day.
 
 ## New results (believed novel as of 2026-07-24)
 
-### 1. Erdős #835 — symmetry obstruction for the first open case  `p835/`
+### 1. Erdős #835 → a new design-theory theorem  `p835/`
+**Update (same night):** a March 2026 forum comment closes k = 10 and k = 12
+outright (Steiner large-set argument: χ(J(20,10)) ≥ 12, χ(J(24,12)) ≥ 14), so
+for #835 itself the theorem below is subsumed; the problem's real frontier is
+k = 16 (tied to the open S(4,5,21)). What survives as new mathematics
+([PROOF.md](p835/PROOF.md)): **Z₁₁ admits at most 7 pairwise disjoint starters — no
+golf design of order 11 is cyclic** (refines Colbourn–Nonay 1997; human
+mod-3 proof extracted from the SAT core, Lean formalization in progress),
+plus the starter ↔ Johnson-colouring technique now aimed at k = 16 / Z₁₇.
+Original result as found:
 **Theorem (computer-proved, DRAT-certified).** No proper 11-colouring of the
 Johnson graph J(20,10) admits a symmetry of order 11 — i.e. for every order-11
 element g of Aut(J(20,10)) and every colour-permutation π with π∘colour =
