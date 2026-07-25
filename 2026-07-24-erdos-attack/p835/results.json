@@ -1,0 +1,137 @@
+{
+  "problem": "Erdos #835 (Erdos-Rosenfeld): does J(2k,k) have chromatic number k+1 for some k>2? First open case k=10: is J(20,10) properly 11-colorable?",
+  "date": "2026-07-24",
+  "machine": "16 cores, 128GB RAM, kissat 4.0.4",
+  "main_result": {
+    "statement": "The C11-twisted ansatz for k=10 is REFUTED: there is NO proper 11-coloring of J(20,10) satisfying color(sigma(A)) = color(A) + 1 (mod 11) for the 11-cycle sigma = (1 2 ... 11) fixing 12..20.",
+    "consequence": "Equivalently (by conjugacy of 11-cycles in S20, by relabeling of an 11-cycle color action to +1, and by impossibility of sigma-invariant colorings due to within-orbit edges): NO proper 11-coloring of J(20,10) admits ANY symmetry of order 11, i.e. no pair (g, pi) with g in Aut(J(20,10)) of order 11 and pi any permutation of the 11 colors such that color(gA) = pi(color(A)). In particular every AGL(1,11)-equivariant ansatz is dead a fortiori. The k=10 case itself remains OPEN in both directions.",
+    "unsat_replications": [
+      {
+        "config": "kissat default",
+        "seconds": 405.12,
+        "result": "UNSATISFIABLE"
+      },
+      {
+        "config": "kissat --unsat",
+        "seconds": 487.43,
+        "result": "UNSATISFIABLE"
+      },
+      {
+        "config": "kissat --sat --seed=1",
+        "seconds": 321.43,
+        "conflicts": 1822603,
+        "result": "UNSATISFIABLE"
+      },
+      {
+        "config": "kissat --sat --seed=42",
+        "seconds": 431.09,
+        "result": "UNSATISFIABLE"
+      }
+    ],
+    "drat_certificate": {
+      "solve": "kissat j20_10.cnf j20_10.drat: s UNSATISFIABLE in 297.64 s (5th independent UNSAT)",
+      "proof_file": "j20_10.drat, 690,524,503 bytes (659 MB, binary DRAT)",
+      "checker": "drat-trim (backward checking)",
+      "verdict": "s VERIFIED",
+      "verification_seconds": 5120.479,
+      "stats": {
+        "core_clauses": "51283 of 10150217",
+        "core_lemmas": "514433 of 14239721",
+        "resolution_steps": 21357398,
+        "rat_lemmas_in_core": 41442
+      },
+      "note": "UNSAT core touches only 0.5% of the original clauses -- a compact refutation exists; core extraction is a promising route to a human-readable mod-11 obstruction."
+    }
+  },
+  "instance": {
+    "file": "j20_10.cnf",
+    "vertices": 184756,
+    "edges": 9237800,
+    "orbits": 16796,
+    "orbit_size": 11,
+    "no_invariant_vertices": true,
+    "triples_deduped": 837240,
+    "same_orbit_edge_incidences": 5120,
+    "triple_accounting": "16796*100 rep-neighbor incidences = 5120 same-orbit + 2*837240 cross-orbit (each triple seen exactly twice)",
+    "vars": 184756,
+    "clauses": 10150217,
+    "symmetry_break": "x_orbit0 = 0 (global color shift)",
+    "delta_histogram": [
+      509370,
+      65658,
+      29775,
+      31092,
+      30591,
+      30606,
+      30408,
+      28953,
+      26898,
+      23949,
+      29940
+    ]
+  },
+  "pipeline_validation": {
+    "k2_J42": {
+      "exhaustive_equivalence": "all 9 base-color assignments: CNF-triple satisfaction == direct edge properness of expanded coloring",
+      "kissat": "SAT",
+      "solutions": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "decoded_coloring_verified": "independent rainbow check on all 4 triangles of J(4,2): PASS (chi(J(4,2)) = 3 = k+1 reproduced)"
+    },
+    "k4_J84": {
+      "sampled_equivalence": "20000 random assignments agree (CNF vs direct)",
+      "kissat": "UNSAT",
+      "independent_exhaustive_DFS": "0 twisted 5-colorings (matches known chi(J(8,4)) > 5)"
+    },
+    "k10_quantitative": "2 random base-color vectors: monochromatic edges over all 9,237,800 edges == 11 * violated triples EXACTLY (841313 = 11*76483; 837177 = 11*76107)"
+  },
+  "local_search_evidence": {
+    "solver": "custom WalkSAT-style over Z11^16796 (ls.c), ~300k moves/s per chain",
+    "chains": 8,
+    "plateau_violations": "all 8 chains stuck at ~43150-43400 of 837240 constraints (~5.2%) after 50-84M moves",
+    "note": "consistent with UNSAT; calibrated on k=2 (solves instantly) and k=4 (correctly cannot solve)"
+  },
+  "first_moment_context": "E[# twisted colorings] = 11^16796 * (10/11)^837240 = 11^-16484: ansatz needed algebraic coincidence; none exists.",
+  "probing_untwisted": {
+    "probe_random_40k": {
+      "vertices": 40000,
+      "induced_edges": 433518,
+      "result": "SAT in 1.57 s; model independently verified proper (0 monochromatic edges)"
+    },
+    "probe_random_80k": {
+      "vertices": 80000,
+      "induced_edges": 1732157,
+      "result": "UNKNOWN (kissat --sat, 3600 s cap reached, undecided)"
+    },
+    "probe_random_120k": {
+      "vertices": 120000,
+      "induced_edges": 3897668,
+      "result": "UNKNOWN (kissat --sat, 3600 s cap reached, undecided)"
+    },
+    "J18_9": {
+      "vertices": 48620,
+      "edges": 1969110,
+      "note": "induced in J(20,10) by padding {19,20}; Ma-Tang gives chi(J(18,9)) >= 11 (k=9, 10 not prime); UNSAT would prove chi(J(20,10)) >= 12",
+      "result": "UNKNOWN (kissat default, 5400 s cap reached, undecided)"
+    },
+    "J19_10": {
+      "vertices": 92378,
+      "edges": 4157010,
+      "note": "isomorphic to J(19,9); induced in J(20,10); between J(18,9) and J(20,10)",
+      "result": "UNKNOWN (kissat default, 5400 s cap reached, undecided)"
+    },
+    "summary": "Sparse random subgraphs (21.6% of vertices) are trivially 11-colorable; at 43%+ density and for the structured subgraphs J(18,9), J(19,10) the untwisted question already exceeds 1-1.5 h of CDCL in BOTH directions. No evidence either way for the untwisted chi(J(20,10)) <= 11 question."
+  }
+}

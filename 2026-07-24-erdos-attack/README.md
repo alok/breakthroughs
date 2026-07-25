@@ -19,10 +19,13 @@ not excluded by Ma–Tang), every witness colouring is 11-asymmetric — ruling
 out the natural algebraic/equivariant constructions suggested by the
 Ma–Tang "k = p−1" pattern.
 Method: C₁₁ regular-twist equivariant SAT (184,756 vertices → 16,796 orbits;
-10.2M clauses; UNSAT replicated by 4 solver configurations; pipeline validated
-in both directions on J(4,2) (SAT, χ=3 reproduced) and J(8,4) (UNSAT, matches
-known χ>5)). Weak positive signal recorded: random 40k-vertex induced
-subgraphs of J(20,10) are 11-colourable in seconds.
+10.2M clauses; UNSAT replicated by 5 solver runs; pipeline validated in both
+directions on J(4,2) (SAT, χ=3 reproduced) and J(8,4) (UNSAT, matches known
+χ>5)). **DRAT certificate formally verified** (drat-trim `s VERIFIED`, 659 MB
+proof, 85-min check; core only 51,283/10,150,217 clauses — a compact
+human-readable mod-11 obstruction likely exists; see [p835/LEMMA.md](p835/LEMMA.md)).
+Weak positive signal recorded: random 40k-vertex induced subgraphs of
+J(20,10) are 11-colourable in seconds.
 
 ### 2. Erdős #993 — first n = 29 non-log-concavity census  `p993/`
 Unimodality of tree independence polynomials (Alavi–Malde–Schwenk–Erdős 1987)
